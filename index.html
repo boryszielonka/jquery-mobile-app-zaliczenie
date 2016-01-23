@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">        
+        <meta name="author" content="Borys Zielonka">
+        <meta name="description" content="Aplikacja na zaliczenie zajęć.">
+        
+        <!-- Mobile Stuff -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-tap-highlight" content="no">
+        
+
+        
+        <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/script.js"></script>
+        <script> 
+            $(function () { $("div[data-role='panel']").panel().enhanceWithin(); }); 
+$(function(){
+	$( "[data-role='footer']" ).toolbar({ theme: "a",tapToggle: false });
+});
+        
+        </script>
+        <script src="phonegap.js"></script>
+        
+        
+        <title>Finanse online - zaliczenie</title>
+
+    </head>
+
+    <body>
+        <div data-role="panel" id="panel" data-position="left" data-display="overlay" data-theme="a">
+                <h2>Menu</h2>
+                <div data-role="controlgroup" data-type="vertical" id="panelgroup">
+                    <a href="#home" class="ui-btn">Start</a>
+                    <a href="#konto" class="ui-btn">Konto</a>
+                    <a href="#koty" class="ui-btn">Kup Kota</a>
+                    <a href="#pomoc" class="ui-btn">Pomoc</a>
+                </div>
+                <a href="#logout" class="ui-btn">Wyloguj</a>
+        </div>
+        <div id="home" data-role="page" data-title="Homepage">
+            <div data-role="header">
+                <a href="#panel" data-icon="home" data-iconpos="notext" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+                <h1>Home</h1>
+                <a href="#konto" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini">Saldo: <span>10,15 PLN</span></a>
+                
+            </div>
+            <div data-role="content">
+                <div id="title">
+                    <h2>Zielonka & Przytuła App</h2>
+                    <h4>zaliczenie finanse online</h4>
+                </div>
+                
+                <div id="logo">
+                    <img src="img/logo-cat2.png"/>
+                </div>
+                <div style="text-align:center">
+                    <p>Projekt aplikacji mobilnej wykonany na zaliczenie zajęć z Panią dr Dagmarą Wach.</p>
+                    <p>Kod źródłowy pod adresem: </p>
+                    <a href="https://github.com/boryszielonka/jquery-mobile-app-zaliczenie">https://github.com/boryszielonka/jquery-mobile-app-zaliczenie</a>
+                </div>
+            </div>
+
+        
+        </div>
+        <!-- Konto -->
+        <div id="konto" data-role="page" data-title="Moje konto">
+            <div id="header" data-role="header">
+                <a href="#panel" data-icon="home" data-iconpos="notext" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+                <h1>Konto</h1>
+                <a href="#konto" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini">Saldo: <span>10,15 PLN</span></a>
+            </div>
+            <div data-role="content" style="text-align:center">
+                <img src="img/profile.png"/>
+                <h2>Filemon Bonifacy</h2>
+                <div data-role="controlgroup">
+                    <span class="ui-btn">Stan konta: 10,15</span>
+                    <span class="ui-btn">Dane:</span>
+                    <span class="ui-btn"></span>
+  
+                </div>
+                <a href="#doladuj" class="ui-shadow ui-btn ui-corner-all ui-btn-b">Doładuj konto</a>
+                <a href="#zmiendane" data-rel="dialog" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">Edytuj dane</a>
+            </div>
+        </div>
+        <!-- Zmiana danych -->
+        <div id="zmiendane" data-role="page" data-title="zmiendane">        
+            <div data-role="header">
+                <h1>Uwaga kolego!</h1>
+            </div>
+            <div data-role="content">
+                <h2>Czy chcesz zmienić dane?</h2>
+                <p>Koty nie mogą zmieniać swoich danych...</p>
+                <a href="#konto" class="ui-btn ui-btn-b">Rozumiem!</a>
+            </div>
+        </div>
+        <!-- Koty -->
+        <div id="koty" data-role="page" data-title="Kup kota">
+            <div data-role="header">
+                <a href="#panel" data-icon="home" data-iconpos="notext" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+                <h1>Koty</h1>
+                <a href="#konto" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini">Saldo: <span>10,15 PLN</span></a>
+            </div>
+            <div data-role="content" style="text-align:center;">
+                <h3>Wybierz swojego kota!</h3>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h2>Kot Borys</h2>
+                        <p>1 012 340 PLN</p>
+                        <a href="#brak" data-rel="dialog" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">
+                            Kup teraz
+                        </a>
+                    </div>
+                    <div class="ui-block-b">   
+                        <img src="img/cat1.png" />
+                    </div>
+
+                </div>
+                <hr/>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h2>Kot Andrzej</h2>
+                        <p>34 713 989 PLN</p>
+                        <a href="#brak" data-rel="dialog" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">
+                            Kup teraz
+                        </a>
+                    </div>
+                    <div class="ui-block-b">   
+                        <img src="img/cat2.png" />
+                    </div>
+
+                </div>
+                <hr/>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <h2>Kot Jakub</h2>
+                        <p>3 024 542 PLN</p>
+                        <a href="#brak" data-rel="dialog" class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop">
+                            Kup teraz
+                        </a>
+                    </div>
+                    <div class="ui-block-b">   
+                        <img src="img/cat3.png" />
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+        <!-- BRAK srodków -->
+        <div id="brak" data-role="page">
+            <div data-role="header">
+                <h1>Brak środków na koncie!</h1>
+            </div>
+            <div data-role="content">
+                Aby móc kupić tego kota, doładuj swoje konto.
+                <a href="#doladuj" class="ui-btn">Doładuj konto</a>
+            </div>
+        
+        </div>
+        <!--- Doładownie konta -->
+        <div id="doladuj" data-role="page">
+            <div data-role="header">
+                <a href="#panel" data-icon="home" data-iconpos="notext" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+                <h1>Doładowanie</h1>
+                <a href="#konto" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini">Saldo: <span>10,15 PLN</span></a>
+            </div>
+            <div data-role="content">
+                <form id="" method="get" action="#">
+                    <div class="ui-field-contain">
+                        <label for="firstname">Imię: </label>
+                        <input type="text" name="firstname" id="firstname" placeholder="Imię" value="">
+                        <label for="lastname">Nazwisko: </label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Nazwisko" value="">
+                        
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="pcode">Numer karty: </label>
+                        <input type="number" name="kod" id="kod" placeholder="nr karty" value="">
+                        <label for="pcode">CVC: </label>
+                        <input type="number" name="cvc" id="cvc" placeholder="cvc" value="">
+                        <label for="date">Data ważności: </label>
+                        <input type="date" name="data" id="data" placeholder="Data" value="">
+                        <label for="slider-fill">Kwota doładowania:</label>
+                        <input type="range" name="slider-fill" id="slider-fill" value="0" min="0" max="10000000" step="100000" data-highlight="true">
+   
+                        
+                    </div>
+                    <button id="submit" >Wyślij</button>
+                    
+                    
+                </form>
+            </div>
+        </div>
+        <!-- POMOC -->
+        <div id="pomoc" data-role="page">
+            <div data-role="header">
+                <a href="#panel" data-icon="home" data-iconpos="notext" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+                <h1>Pomoc</h1>
+                <a href="#konto" class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini">Saldo: <span>10,15 PLN</span></a>
+            </div>
+            <div data-role="content">
+                    <p>Oto parę przydatnych informacji na temat kotów.</p>
+                    <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+                        <div data-role="collapsible" id="set1" data-collapsed="true">
+                            <h3>Ile kot ma nóg?</h3>
+                            <p>4</p>
+                        </div>
+                        <div data-role="collapsible" id="set2" data-collapsed="true">
+                            <h3>Co lubi kot?</h3>
+                            <p>Mleko.</p>
+                        </div>
+                        <div data-role="collapsible" id="set2" data-collapsed="true">
+                            <h3>Czy kot ma wąsy?</h3>
+                            <p>Tak.</p>
+                        </div>
+                        <div data-role="collapsible" id="set2" data-collapsed="true">
+                            <h3>Kto nie lubi kota?</h3>
+                            <p>Pies.</p>
+                        </div>
+                        <div data-role="collapsible" id="set2" data-collapsed="true">
+                            <h3>Jak robi kot?</h3>
+                            <p>Miau.</p>
+                        </div>
+                    </div>
+            
+            </div>
+        
+        </div>
+        
+        
+        <!-- Stopka -->
+        <div data-role="footer" data-position="fixed" id="footer">
+            <div data-role="content">
+                <p>Copyright Borys Zielonka & Jakub Przytuła</p>
+            </div>
+        </div>
+  
+
+    </body>
+</html>

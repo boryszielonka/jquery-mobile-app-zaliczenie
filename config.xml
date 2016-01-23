@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns       = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.zielonka.zaliczenie"
+        versionCode = "10"
+        version     = "1.0.0">
+
+    <name>Zaliczenie Koty</name>
+    <description>
+        Projekt aplikacji mobilnej - płatności za koty - zrobiony na zaliczenie zajęć z Panią dr Dagmarą Wach wykonany przez Borysa Zielonkę.
+    </description>
+    
+    <author href="http://www.boryszielonka.pl" email="boryszielonka@gmail.com">
+        Borys Zielonka
+    </author>
+    
+    <icon src="icon.png"/>
+    <gap:splash src="splash.png"/>
+    <gap:platform name="android"/>
+    <access origin="*"/>
+</widget>
