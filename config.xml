@@ -3,11 +3,11 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.zielonka.zaliczenie"
         versionCode = "10"
-        version     = "1.0.0">
+        version     = "1.0.1">
 
     <name>Zaliczenie Koty</name>
     <description>
-        Projekt aplikacji mobilnej - płatności za koty - zrobiony na zaliczenie zajęć z Panią dr Dagmarą Wach wykonany przez Borysa Zielonkę.
+        Projekt aplikacji mobilnej - płatności za koty - zrobiony na zaliczenie zajęć z Panią dr Dagmarą Wach wykonany przez Borysa Zielonkę oraz Jakuba Przytułę - grupa Biznes Elektroniczny.
     </description>
     
     <author href="http://www.boryszielonka.pl" email="boryszielonka@gmail.com">
@@ -15,7 +15,9 @@
     </author>
     
     <icon src="icon.png"/>
-    <gap:splash src="splash.png"/>
-    <gap:platform name="android"/>
+    <splash src="splash.png" />
+    <platform name="ios" />
+<platform name="android" />
+<platform name="winphone" />
     <access origin="*"/>
 </widget>
