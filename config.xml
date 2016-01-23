@@ -15,7 +15,7 @@
     </author>
     
     <icon src="icon.png"/>
-    <splash src="splash.png"/>
+    <gap:splash src="splash.png"/>
     <gap:platform name="android"/>
     <access origin="*"/>
 </widget>
