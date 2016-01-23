@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.zielonka.zaliczenie"
         versionCode = "10"
-        version     = "1.0.0">
+        version     = "1.0.6">
 
     <name>Zaliczenie Koty</name>
     <description>
@@ -15,7 +15,9 @@
     </author>
     
     <icon src="icon.png"/>
-    <gap:splash src="splash.png"/>
-    <gap:platform name="android"/>
+    <splash src="splash.png" />
+    <platform name="ios" />
+<platform name="android" />
+<platform name="winphone" />
     <access origin="*"/>
 </widget>
