@@ -7,7 +7,7 @@
 
     <name>Zaliczenie Koty</name>
     <description>
-        Projekt aplikacji mobilnej - płatności za koty - zrobiony na zaliczenie zajęć z Panią dr Dagmarą Wach wykonany przez Borysa Zielonkę i Jakuba Przytułę.
+        Projekt aplikacji mobilnej - płatności za koty - napisany przy użyciu biblioteki jQuery Mobile w ramach zajęć z Panią dr Dagmarą Wach. Autorzy: Borys Zielonka i Jakub Przytuła.
     </description>
     
     <author href="http://www.boryszielonka.pl" email="boryszielonka@gmail.com">
